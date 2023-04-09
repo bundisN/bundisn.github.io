@@ -11,15 +11,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/Fav.jpg" type="image/x-icon">
 </head>
 
 <body>
-    <div class="LogSite">
+    <form class="LogSite" action="#">
         <h2 class="Text3">Войти на сайт</h2>
-        <a class="log" href="#">Логин</a>
-        <a class="pas" href="#">Пароль</a>
+        <input class="log" type="text" placeholder="Логин">
+        <input class="pas" type="password" placeholder="Пароль">
         <a class="baton2" href="#">Войти</a>
-    </div>
+    </form>
+
     <div class="all">
         <header class="heder">
             <a class="logo" href="index.html">
@@ -33,7 +35,7 @@
                     <li class="menu_list"><a class="menu_link" href="contacts.html"> Контакты</a></li>
                 </ul>
             </nav>
-            <a class="baton" href="#">Войти</a>
+            <a class="button" href="#">Войти</a>
         </header>
         <main class="content">
             <h1 class="taitl">Добро пожаловать на курс “Создание веб-сайтов (HTML, CSS)”!</h1>
@@ -65,13 +67,11 @@
         2023 &COPY; <a class="text_end" href="#">учебный центр</a>
     </footer>
     <script>
-        const ButtonEl = document.querySelector('.baton');
+        const ButtonEl = document.querySelector('.button');
         const blockEl = document.querySelector('.LogSite');
         ButtonEl.addEventListener('click', function (e) {
             blockEl.classList.toggle('visible')
         })
-
-
     </script>
 </body>
 

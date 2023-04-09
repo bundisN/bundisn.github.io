@@ -11,9 +11,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/Fav.jpg" type="image/x-icon">
 </head>
 
 <body>
+    <form class="LogSite" action="#">
+        <h2 class="Text3">Войти на сайт</h2>
+        <input class="log" type="text" placeholder="Логин">
+        <input class="pas" type="password" placeholder="Пароль">
+        <a class="baton2" href="#">Войти</a>
+    </form>
     <div class="all">
         <header class="heder">
             <a class="logo" href="index.html">
@@ -27,19 +34,31 @@
                     <li class="menu_list"><a class="menu_link" href="contacts.html"> Контакты</a></li>
                 </ul>
             </nav>
-            <a class="baton" href="#">Войти</a>
+            <a class="button" href="#">Войти</a>
         </header>
         <main class="content-about">
             <h1 class="taitl">О курсе 📱</h1>
             <p class="about_text">Посмотрите видео о нас</p>
-            <div class="video">
-                <img class="img" src="img/video.jpg" alt="Видео">
-            </div>
+            <video class="video" poster="img/video.jpg" controls>
+                <source src="video.mp4" type="video/mp4">
+                <source src="video.ogg" type="video/ogg">
+                <source src="video.webm" type="video/webm">
+                <object data="video.mp4" width="470" height="255">
+                    <embed src="video.swf" width="470" height="255">
+                </object>
+            </video>
         </main>
-    </div>
+    </div>  
     <footer class="footer">
         2023 &COPY; <a class="text_end" href="#">учебный центр</a>
     </footer>
+    <script>
+        const ButtonEl = document.querySelector('.button');
+        const blockEl = document.querySelector('.LogSite');
+        ButtonEl.addEventListener('click', function (e) {
+            blockEl.classList.toggle('visible')
+        })
+    </script>
 </body>
 
 </html>
