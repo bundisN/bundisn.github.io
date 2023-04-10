@@ -3,14 +3,6 @@
     padding: 0;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
 .logo {
     background: none;
 }
@@ -20,8 +12,17 @@ body {
 
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
 .all {
     flex-grow: 1;
+
 }
 
 .LogSite {
@@ -29,7 +30,6 @@ body {
     width: 500px;
     background: #FFFFFF;
     border: 1px solid #213B7E;
-    display: flex;
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
@@ -37,6 +37,7 @@ body {
     left: 25%;
     display: none;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 .log {
@@ -388,6 +389,7 @@ body {
 
 .student {
     width: 200PX;
+    text-align: center;
     position: relative;
 }
 
@@ -415,12 +417,12 @@ body {
     color: #000000;
     text-align: center;
     margin-top: 8px;
-    height: 50px;
 }
 
 .namestudets:hover {
     background: #99aad7;
 }
+
 
 /* about */
 
@@ -443,7 +445,9 @@ body {
     margin-top: 15px;
     padding: 10px;
     cursor: pointer;
-    border: 2px solid #FFFFFF;
+    border: 2px solid #EA5D21;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .video:hover {
@@ -529,6 +533,58 @@ body {
     justify-content: space-between;
     margin-top: 10px;
 }
+
+/* aboutMe */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 50px 50px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "фото Имя"
+        "мои-контакты Достижения";
+        margin: 20px 20px 20px 20px;
+        font-family: 'Roboto', sans-serif;  
+        text-align: center;
+        padding-left: calc(50% - 820px / 2);
+        padding-right: calc(50% - 820px / 2);
+}
+
+.MyСontacts {
+    grid-area: мои-контакты;
+    border: 2px #213B7E;
+    border-radius: 20px;
+    background-color: #4682e2;
+    
+}
+
+.Progress {
+    grid-area: Достижения;
+    border: 2px #213B7E;
+    border-radius: 20px;
+    background-color: #4682e2;  
+
+}
+
+.photo {
+    grid-area: фото;
+    border: 2px #213B7E;
+    border-radius: 20px;
+    background-color: #4682e2;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.name {
+    grid-area: Имя;
+    border: 2px #213B7E;
+    border-radius: 20px;
+    background-color: #4682e2;
+}
+
 
 @media (max-width: 1024px) {
 
