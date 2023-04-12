@@ -9,11 +9,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <title>Контакты</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/Fav.jpg" type="image/x-icon">
 </head>
 
 <body>
+    <form class="LogSite" action="#">
+        <h2 class="Text3">Войти на сайт</h2>
+        <input class="log" type="text" placeholder="Логин">
+        <input class="pas" type="password" placeholder="Пароль">
+        <a class="baton2" href="#">Войти</a>
+    </form>
     <div class="all">
         <header class="heder">
             <a class="logo" href="index.html">
@@ -21,13 +28,13 @@
             </a>
             <nav>
                 <ul class="menu">
-                    <li class="menu_list"><a class="menu_link" href="index.html"> Главная</a></li>
-                    <li class="menu_list"><a class="menu_link" href="students.html"> Студенты</a></li>
-                    <li class="menu_list"><a class="menu_link" href="about.html"> О курсе</a></li>
+                    <li class="menu_list"><a class="menu_link" href="index.html">Главная</a></li>
+                    <li class="menu_list"><a class="menu_link" href="students.html">Студенты</a></li>
+                    <li class="menu_list"><a class="menu_link" href="about.html">О курсе</a></li>
                     <li class="menu_list"><a class="menu_link menu_link_activ" href="contacts.html"> Контакты</a></li>
                 </ul>
             </nav>
-            <a class="baton" href="#">Войти</a>
+            <a class="button" href="#">Войти</a>
         </header>
         <main class="content-contfct">
             <h1 class="contacts_taitl">Как нас найти 🗺️️</h1>
@@ -50,6 +57,13 @@
     <footer class="footer">
         2023 &COPY; <a class="text_end" href="#">учебный центр</a>
     </footer>
+    <script>
+        const ButtonEl = document.querySelector('.button');
+        const blockEl = document.querySelector('.LogSite');
+        ButtonEl.addEventListener('click', function (e) {
+            blockEl.classList.toggle('visible')
+        })
+    </script>
 </body>
 
 </html>
