@@ -436,6 +436,7 @@ body {
 .namestudets:hover {
     background: #99aad7;
 }
+
 .photoSt {
     width: 200px;
     height: 270px;
@@ -560,23 +561,30 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 50px 50px;
-    grid-auto-flow: row;
+    grid-auto-flow: dense;
     grid-template-areas:
         "фото Имя"
-        "мои-контакты Достижения";
+        "Мои-контакты Достижения";
     margin: 20px 20px 20px 20px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     padding-left: calc(50% - 820px / 2);
     padding-right: calc(50% - 820px / 2);
+    min-width: 500px;
+
 }
 
 .MyСontacts {
-    grid-area: мои-контакты;
+    grid-area: Мои-контакты;
     border: 2px #213B7E;
     border-radius: 20px;
     background-color: #4682e2;
+    font-size: 18px;
+}
 
+.textMyContacts {
+    padding: 10px;
+    font-size: 15px;
 }
 
 .Progress {
@@ -584,7 +592,9 @@ body {
     border: 2px #213B7E;
     border-radius: 20px;
     background-color: #4682e2;
-
+    font-size: 18px;
+    height: 270px;
+    overflow: auto;
 }
 
 .photo {
@@ -595,8 +605,7 @@ body {
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
-    width: 100px;
-    height: 135px; 
+
 }
 
 .name {
@@ -604,6 +613,7 @@ body {
     border: 2px #213B7E;
     border-radius: 20px;
     background-color: #4682e2;
+    font-size: 18px;
 }
 
 
